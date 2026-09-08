@@ -1,0 +1,88 @@
+/* CONTENITORE PRINCIPALE */
+.task-container {
+  width: 90%;
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TITOLO */
+h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* FORM PER AGGIUNGERE UN TASK */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* INPUT */
+.task-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* PULSANTE ADD */
+.task-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: green;
+}
+
+/* LISTA DEI TASK */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* SINGOLO TASK */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+/* TESTO TASK */
+.task-item span {
+  flex: 1;
+}
+
+/* TASK COMPLETATO */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* PULSANTE DELETE */
+.task-item button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.task-item button:hover {
+  background-color: red;
+}
