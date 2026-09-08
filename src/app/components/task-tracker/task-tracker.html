@@ -1,0 +1,33 @@
+<div class="task-container">
+  <h1>Task Tracker</h1>
+
+  <!-- AGGIUNTA NUOVO TASK -->
+  <div class="task-form">
+    <input
+      type="text"
+      placeholder="Enter a new task"
+      [value]="newTask()"
+      (input)="updateNewTask($event)"
+    />
+
+    <button type="button" (click)="addTask()">↵</button>
+  </div>
+
+  <!-- ELENCO DEI TASK -->
+  <div class="task-list">
+    @for (task of orderedTasks(); track task.id) {
+      <div class="task-item">
+        <!-- CHECKBOX -->
+        <input type="checkbox" [checked]="task.completed" (change)="toggleTask(task.id)" />
+
+        <!-- TESTO DEL TASK -->
+        <span [class.completed]="task.completed">
+          {{ task.description }}
+        </span>
+
+        <!-- PULSANTE DELETE -->
+        <button type="button" (click)="deleteTask(task.id)">Delete</button>
+      </div>
+    }
+  </div>
+</div>
